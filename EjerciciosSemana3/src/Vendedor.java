@@ -3,7 +3,7 @@ public class Vendedor {
     int tipo;
     double ventas;
 
-    public Vendedor (long doc, int tipo, int ven){
+    public Vendedor (long doc, int tipo, double ven){
         this.documento=doc;
         this.tipo=tipo;
         this.ventas=ven;
