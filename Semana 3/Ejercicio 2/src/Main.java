@@ -21,7 +21,7 @@ public class Main {
             System.out.print("VENDEDOR " + (i+1) + ": Ingrese el valor de las ventas del mes: $");
             valventas = Double.parseDouble(scn.nextLine());
 
-            Vendedor vendedor = new Vendedor(documento, tipo, valventas);
+            Vendedor1 vendedor = new Vendedor1(documento, tipo, valventas);
             System.out.println("La comision total del vendedor " +(i+1)+" es: $" + df.format(vendedor.calcCom()));
             System.out.println("------------------------------------------------");
             total = total + vendedor.calcCom();
