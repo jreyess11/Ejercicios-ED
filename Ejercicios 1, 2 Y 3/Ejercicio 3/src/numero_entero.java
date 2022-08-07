@@ -40,8 +40,10 @@ public class numero_entero {
 
         if (num==0){
             System.out.println("El numero " + num + " no es ni primo ni compuesto.");
+            return;
         } else if (num<0){
             System.out.println("El numero " + num + " NO ES primo (ningun negativo lo es).");
+            return;
         }
 
         if(p){

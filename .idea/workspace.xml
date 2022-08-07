@@ -33,15 +33,22 @@
   }
 }</component>
   <component name="RunManager" selected="Application.Main1">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="Main1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main1" />
       <module name="Ejercicios-ED" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main1" />
+    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main2" />
+      <module name="Ejercicios-ED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main3" />
       <module name="Ejercicios-ED" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -50,7 +57,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main1" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main2" />
+        <item itemvalue="Application.Main3" />
       </list>
     </recent_temporary>
   </component>
@@ -64,6 +72,7 @@
       <updated>1659807049505</updated>
       <workItem from="1659807051408" duration="177000" />
       <workItem from="1659807302394" duration="957000" />
+      <workItem from="1659845359258" duration="658000" />
     </task>
     <servers />
   </component>
