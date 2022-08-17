@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e607c6-cb73-4666-b293-90730f5d33ac" name="Changes" comment="" />
+    <list default="true" id="569331ea-ea33-47a0-a771-5a9eb24f2f52" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,39 +16,25 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2CzYnKqKnnEH5ph8d1sCFelkwqP" />
+  <component name="ProjectId" id="2DSeTInQXZWaIFaAgdNP59vMwWC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
-  <component name="RunManager" selected="Application.Main1">
-    <configuration name="Main1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main1" />
-      <module name="Ejercicios-ED" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main2" />
-      <module name="Ejercicios-ED" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main3" />
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Ejercicios-ED" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -56,28 +42,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main1" />
-        <item itemvalue="Application.Main2" />
-        <item itemvalue="Application.Main3" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="15e607c6-cb73-4666-b293-90730f5d33ac" name="Changes" comment="" />
-      <created>1659807049505</created>
+      <changelist id="569331ea-ea33-47a0-a771-5a9eb24f2f52" name="Changes" comment="" />
+      <created>1660696922375</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1659807049505</updated>
-      <workItem from="1659807051408" duration="177000" />
-      <workItem from="1659807302394" duration="957000" />
-      <workItem from="1659845359258" duration="749000" />
-<<<<<<< HEAD
-      <workItem from="1659910570523" duration="465000" />
-=======
-      <workItem from="1660231402755" duration="59000" />
->>>>>>> 189c5489d53a53b3704e42b075d9a0bb5405a401
+      <updated>1660696922375</updated>
+      <workItem from="1660696924891" duration="6227000" />
     </task>
     <servers />
   </component>

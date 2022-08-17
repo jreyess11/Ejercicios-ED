@@ -36,23 +36,47 @@ public class Lista {
     }
     public void imprimir(){
         Nodo i = this.cabeza;
-        System.out.print("[");
+        System.out.print("\n[");
         while (i.siguiente!=null){
             System.out.print(i.info+", ");
             i = i.siguiente;
             if (i.siguiente==null){
                 System.out.print(i.info);
             }
-        } System.out.print("]");
+        } System.out.print("], Tamano " +tamano+"\n");
     }
 
     public void borrar(Object o){
         Nodo i = this.cabeza;
-        while (i.siguiente.info!=o){
-            i = i.siguiente;
+        if (i.info==o){
+            this.cabeza = i.siguiente;
+            tamano--;
+            return;
+        }
+        while (i.siguiente!=null){
+            if (i.siguiente.info==o){
+                i.siguiente=i.siguiente.siguiente;
+                tamano--;
+                return;
             }
-        if (i.siguiente==null){
-            System.out.print(i.info);
-        } System.out.print("]");
+            i = i.siguiente;
+        }
+        System.out.println("Esta tratando de borrar el elemento "+o+", el cual no esta en la lista.");
+    }
+
+    public void buscar(Object o){
+        Nodo i = this.cabeza;
+        if (i.info==o){
+            System.out.println("El elemento "+o+" SI esta en la lista");
+            return;
+        }
+        while (i.siguiente!=null){
+            if (i.siguiente.info==o){
+                System.out.println("El elemento "+o+" SI esta en la lista");
+                return;
+            }
+            i = i.siguiente;
+        }
+        System.out.println("El elemento "+o+" NO esta en la lista");
     }
 }
