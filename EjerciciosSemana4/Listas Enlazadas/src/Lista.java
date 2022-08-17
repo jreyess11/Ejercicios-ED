@@ -24,7 +24,33 @@ public class Lista {
         }
     }
 
-    public void agregar(Object o){
+    public void agregarInicio(Object o){
+        Nodo nuevoNodo = new Nodo(o);
+        nuevoNodo.siguiente = this.cabeza;
+        this.cabeza = nuevoNodo;
+        tamano++;
+    }
+
+    public void agregarPos(Object o, int ind){
+        Nodo nuevoNodo = new Nodo(o);
+        Nodo i = this.cabeza;
+        if (ind==0){
+            agregarInicio(o);
+        } else if (ind==tamano) {
+            agregarFin(o);
+        } else if (ind>tamano){
+            System.out.println("Esta tratando de agregar a una posicion que excede las fronteras.");
+        } else {
+            for (int j=0; j<ind-1; j++){
+                i = i.siguiente;
+            }
+            nuevoNodo.siguiente = i.siguiente;
+            i.siguiente=nuevoNodo;
+            tamano++;
+        }
+    }
+
+    public void agregarFin(Object o){
         Nodo nuevoNodo = new Nodo(o);
         if(estaVacio()){
             this.cabeza = nuevoNodo;
