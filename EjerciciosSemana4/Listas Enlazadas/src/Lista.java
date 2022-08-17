@@ -62,7 +62,7 @@ public class Lista {
     }
     public void imprimir(){
         Nodo i = this.cabeza;
-        System.out.print("\n[");
+        System.out.print("[");
         while (i.siguiente!=null){
             System.out.print(i.info+", ");
             i = i.siguiente;
