@@ -12,7 +12,7 @@ public class Lista {
     public Lista(Object o){
         this.tamano = 1;
         Nodo nuevoNodo = new Nodo(o);
-        this.cabeza=nuevoNodo;
+        this.cabeza = nuevoNodo;
         this.cola = nuevoNodo;
     }
 
@@ -31,5 +31,28 @@ public class Lista {
         } else {
             this.cola.siguiente = nuevoNodo;
         }
+        this.cola = nuevoNodo;
+        tamano++;
+    }
+    public void imprimir(){
+        Nodo i = this.cabeza;
+        System.out.print("[");
+        while (i.siguiente!=null){
+            System.out.print(i.info+", ");
+            i = i.siguiente;
+            if (i.siguiente==null){
+                System.out.print(i.info);
+            }
+        } System.out.print("]");
+    }
+
+    public void borrar(Object o){
+        Nodo i = this.cabeza;
+        while (i.siguiente.info!=o){
+            i = i.siguiente;
+            }
+        if (i.siguiente==null){
+            System.out.print(i.info);
+        } System.out.print("]");
     }
 }
