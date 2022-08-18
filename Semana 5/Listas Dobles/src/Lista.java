@@ -40,15 +40,17 @@ public class Lista {
             case 1:
                 if (i.info==x){
                     agregarInicio(o);
+                    return;
                 }
-                while (i.siguiente.info!=o){
+                while (i.info!=x){
                     i = i.siguiente;
                 }
-                nuevoNodo.siguiente = i.siguiente;
-                nuevoNodo.siguiente.anterior=nuevoNodo;
-                nuevoNodo.anterior=i;
-                i.siguiente=nuevoNodo;
+                nuevoNodo.siguiente = i;
+                nuevoNodo.anterior=i.anterior;
+                i.anterior.siguiente=nuevoNodo;
+                i.anterior=nuevoNodo;
                 tamano++;
+                break;
 
             case 2:
                 if(i.info==x){
@@ -56,6 +58,7 @@ public class Lista {
                     nuevoNodo.siguiente.anterior=nuevoNodo;
                     i.siguiente=nuevoNodo;
                     nuevoNodo.anterior=i;
+                    return;
                 }
                 while (i.siguiente.info!=o){
                     i = i.siguiente;
@@ -65,6 +68,9 @@ public class Lista {
                 nuevoNodo.anterior=i;
                 i.siguiente=nuevoNodo;
                 tamano++;
+                break;
+            default:
+                System.out.println("La opcion no es valida.");
         }
     }
 
