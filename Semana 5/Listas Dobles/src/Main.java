@@ -14,14 +14,8 @@ public class Main {
         }
         lista.imprimir();
         lista.imprimirRev();
-        lista.borrar(3);
-        lista.imprimir();
-        lista.imprimirRev();
         lista.buscar(3);
-        lista.agregarInicio(56);
-        lista.imprimir();
-        lista.imprimirRev();
-        lista.agregarPos(90,56);
+        lista.agregarPos(111,2);
         lista.imprimir();
         lista.imprimirRev();
     }

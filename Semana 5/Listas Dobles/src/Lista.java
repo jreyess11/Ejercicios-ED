@@ -34,7 +34,9 @@ public class Lista {
         Scanner scn = new Scanner(System.in);
         Nodo nuevoNodo = new Nodo(o);
         Nodo i = this.cabeza;
-        System.out.print("Presione 1 si quiere agregar antes o 2 para agregar despues del "+x+": ");
+        System.out.print("Seleccione su opcion \n" +
+                "1. Agregar antes del "+x+ "\n2. Agregar despues del "+x+"" +
+                "\nRespuesta: ");
         int elec = scn.nextInt();
         switch (elec){
             case 1:
@@ -60,7 +62,7 @@ public class Lista {
                     nuevoNodo.anterior=i;
                     return;
                 }
-                while (i.siguiente.info!=o){
+                while (i.info!=x){
                     i = i.siguiente;
                 }
                 nuevoNodo.siguiente = i.siguiente;
