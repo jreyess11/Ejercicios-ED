@@ -113,17 +113,26 @@ public class Lista {
         } System.out.print("], Tamano " +tamano+"\n");
     }
 
+    public void borrarInicio(){
+        Nodo i = this.cabeza;
+        this.cabeza = i.siguiente;
+        this.cabeza.anterior = null;
+        tamano--;
+    }
     public void borrar(Object o){
         Nodo i = this.cabeza;
         if (i.info==o){
-            this.cabeza = i.siguiente;
-            this.cabeza.anterior=null;
-            tamano--;
+            borrarInicio();
             return;
         }
         while (i.siguiente!=null){
             if (i.siguiente.info==o){
                 i.siguiente=i.siguiente.siguiente;
+                if (i.siguiente==null){
+                    this.cola=i;
+                    tamano--;
+                    return;
+                }
                 i.siguiente.anterior=i;
                 tamano--;
                 return;
@@ -131,6 +140,60 @@ public class Lista {
             i = i.siguiente;
         }
         System.out.println("Esta tratando de borrar el elemento "+o+", el cual no esta en la lista.");
+    }
+
+    public void borrarPos(Object x){
+        Scanner scn = new Scanner(System.in);
+        Nodo i = this.cabeza;
+        System.out.print("Seleccione su opcion...\n" +
+                "1. Borrar antes del "+x+ "\n2. Borrar despues del "+x+"" +
+                "\nRespuesta: ");
+        int elec = scn.nextInt();
+        switch (elec){
+            case 1:
+                if (i.info==x){
+                    System.out.println("No puede borrar el elemento antes del primero de la lista");
+                    return;
+                } else if (i.siguiente.info==x){
+                    borrarInicio();
+                    return;
+                }
+                while (i.siguiente.info!=x){
+                    i = i.siguiente;
+                }
+                i.anterior.siguiente = i.siguiente;
+                i.siguiente.anterior=i.anterior;
+                tamano--;
+                break;
+
+            case 2:
+                if (i.info==x){
+                    borrar(i.siguiente.info);
+                    tamano--;
+                    return;
+                }
+                while (i.info!=x){
+                    i = i.siguiente;
+                }
+                i.anterior.siguiente=i.siguiente;
+                if(i.siguiente==null){
+                    this.cola=i.anterior;
+                    tamano--;
+                    return;
+                }
+                i.siguiente.anterior = i.anterior;
+                tamano--;
+                break;
+            default:
+                System.out.println("La opcion no es valida.");
+        }
+    }
+
+    public void borrarFin(){
+        Nodo i = this.cola;
+        this.cola = i.anterior;
+        this.cola.siguiente = null;
+        tamano--;
     }
 
     public void buscar(Object o){
