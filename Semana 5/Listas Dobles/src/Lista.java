@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Lista {
     public int tamano;
     public Nodo cabeza;
@@ -23,21 +25,55 @@ public class Lista {
     public void agregarInicio(Object o){
         Nodo nuevoNodo = new Nodo(o);
         nuevoNodo.siguiente = this.cabeza;
+        nuevoNodo.siguiente.anterior = nuevoNodo;
         this.cabeza = nuevoNodo;
         tamano++;
     }
 
-    public void agregarPos(Object o, int ind){
+    public void agregarPos(Object o, int x){
+        Scanner scn = new Scanner(System.in);
         Nodo nuevoNodo = new Nodo(o);
         Nodo i = this.cabeza;
-        if (ind==0){
+        System.out.print("Presione 1 si quiere agregar antes o 2 para agregar después del "+o+": ");
+        int elec = scn.nextInt();
+        switch (elec){
+            case 1:
+                if (i.info==o){
+                    agregarInicio(o);
+                }
+                while (i.siguiente.info!=o){
+                    i = i.siguiente;
+                }
+                nuevoNodo.siguiente = i.siguiente;
+                nuevoNodo.siguiente.anterior=nuevoNodo;
+                nuevoNodo.anterior=i;
+                i.siguiente=nuevoNodo;
+                tamano++;
+
+            case 2:
+                if(i.info==o){
+                    nuevoNodo.siguiente=i.siguiente;
+                    nuevoNodo.siguiente.anterior=null;
+                    i.siguiente=nuevoNodo;
+
+                }
+                while (i.siguiente.info!=o){
+                    i = i.siguiente;
+                }
+                nuevoNodo.siguiente = i.siguiente;
+                nuevoNodo.siguiente.anterior=nuevoNodo;
+                nuevoNodo.anterior=i;
+                i.siguiente=nuevoNodo;
+                tamano++;
+        }
+        if (x==0){
             agregarInicio(o);
-        } else if (ind==tamano) {
+        } else if (x==tamano) {
             agregarFin(o);
-        } else if (ind>tamano){
+        } else if (x>tamano){
             System.out.println("Esta tratando de agregar a una posicion que excede las fronteras.");
         } else {
-            for (int j=0; j<ind-1; j++){
+            for (int j=0; j<x-1; j++){
                 i = i.siguiente;
             }
             nuevoNodo.siguiente = i.siguiente;

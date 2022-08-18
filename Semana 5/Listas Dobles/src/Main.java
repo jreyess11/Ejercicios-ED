@@ -17,5 +17,9 @@ public class Main {
         lista.borrar(3);
         lista.imprimir();
         lista.imprimirRev();
+        lista.buscar(3);
+        lista.agregarInicio(56);
+        lista.imprimir();
+        lista.imprimirRev();
     }
 }
