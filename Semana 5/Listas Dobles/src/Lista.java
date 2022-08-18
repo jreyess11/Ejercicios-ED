@@ -30,15 +30,15 @@ public class Lista {
         tamano++;
     }
 
-    public void agregarPos(Object o, int x){
+    public void agregarPos(Object o, Object x){
         Scanner scn = new Scanner(System.in);
         Nodo nuevoNodo = new Nodo(o);
         Nodo i = this.cabeza;
-        System.out.print("Presione 1 si quiere agregar antes o 2 para agregar después del "+o+": ");
+        System.out.print("Presione 1 si quiere agregar antes o 2 para agregar despues del "+x+": ");
         int elec = scn.nextInt();
         switch (elec){
             case 1:
-                if (i.info==o){
+                if (i.info==x){
                     agregarInicio(o);
                 }
                 while (i.siguiente.info!=o){
@@ -51,11 +51,11 @@ public class Lista {
                 tamano++;
 
             case 2:
-                if(i.info==o){
+                if(i.info==x){
                     nuevoNodo.siguiente=i.siguiente;
-                    nuevoNodo.siguiente.anterior=null;
+                    nuevoNodo.siguiente.anterior=nuevoNodo;
                     i.siguiente=nuevoNodo;
-
+                    nuevoNodo.anterior=i;
                 }
                 while (i.siguiente.info!=o){
                     i = i.siguiente;
@@ -65,20 +65,6 @@ public class Lista {
                 nuevoNodo.anterior=i;
                 i.siguiente=nuevoNodo;
                 tamano++;
-        }
-        if (x==0){
-            agregarInicio(o);
-        } else if (x==tamano) {
-            agregarFin(o);
-        } else if (x>tamano){
-            System.out.println("Esta tratando de agregar a una posicion que excede las fronteras.");
-        } else {
-            for (int j=0; j<x-1; j++){
-                i = i.siguiente;
-            }
-            nuevoNodo.siguiente = i.siguiente;
-            i.siguiente=nuevoNodo;
-            tamano++;
         }
     }
 

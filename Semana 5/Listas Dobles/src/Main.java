@@ -21,5 +21,8 @@ public class Main {
         lista.agregarInicio(56);
         lista.imprimir();
         lista.imprimirRev();
+        lista.agregarPos(90,56);
+        lista.imprimir();
+        lista.imprimirRev();
     }
 }
