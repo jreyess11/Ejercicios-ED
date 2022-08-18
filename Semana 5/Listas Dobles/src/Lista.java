@@ -87,12 +87,14 @@ public class Lista {
         Nodo i = this.cabeza;
         if (i.info==o){
             this.cabeza = i.siguiente;
+            this.cabeza.anterior=null;
             tamano--;
             return;
         }
         while (i.siguiente!=null){
             if (i.siguiente.info==o){
                 i.siguiente=i.siguiente.siguiente;
+                i.siguiente.anterior=i;
                 tamano--;
                 return;
             }

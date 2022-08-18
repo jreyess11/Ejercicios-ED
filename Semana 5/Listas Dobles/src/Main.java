@@ -14,5 +14,8 @@ public class Main {
         }
         lista.imprimir();
         lista.imprimirRev();
+        lista.borrar(3);
+        lista.imprimir();
+        lista.imprimirRev();
     }
 }
