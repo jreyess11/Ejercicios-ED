@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Lista lista = new Lista();
+        ListaLD lista = new ListaLD();
         Scanner scn = new Scanner(System.in);
         int obj, pos;
         boolean continuar = true;

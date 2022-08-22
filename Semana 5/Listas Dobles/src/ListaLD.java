@@ -1,21 +1,21 @@
 import java.util.Scanner;
 
-public class Lista {
+public class ListaLD {
     public int tamano;
-    public Nodo cabeza;
-    public Nodo act;
-    public Nodo cola;
+    public NodoLD cabeza;
+    public NodoLD act;
+    public NodoLD cola;
 
-    public Lista() {
+    public ListaLD() {
         this.cabeza = null;
         this.cola = null;
         this.act =null;
         this.tamano = 0;
     }
 
-    public Lista(Object o){
+    public ListaLD(Object o){
         this.tamano = 1;
-        Nodo nuevoNodo = new Nodo(o);
+        NodoLD nuevoNodo = new NodoLD(o);
         this.cabeza = nuevoNodo;
         this.cola = nuevoNodo;
     }
@@ -23,7 +23,7 @@ public class Lista {
     public boolean estaVacio(){return cabeza==null;}
 
     public void agregarInicio(Object o){
-        Nodo nuevoNodo = new Nodo(o);
+        NodoLD nuevoNodo = new NodoLD(o);
         nuevoNodo.siguiente = this.cabeza;
         nuevoNodo.siguiente.anterior = nuevoNodo;
         this.cabeza = nuevoNodo;
@@ -32,8 +32,8 @@ public class Lista {
 
     public void agregarPos(Object o, Object x){
         Scanner scn = new Scanner(System.in);
-        Nodo nuevoNodo = new Nodo(o);
-        Nodo i = this.cabeza;
+        NodoLD nuevoNodo = new NodoLD(o);
+        NodoLD i = this.cabeza;
         System.out.print("Seleccione su opcion \n" +
                 "1. Agregar antes del "+x+ "\n2. Agregar despues del "+x+"" +
                 "\nRespuesta: ");
@@ -77,7 +77,7 @@ public class Lista {
     }
 
     public void agregarFin(Object o){
-        Nodo nuevoNodo = new Nodo(o);
+        NodoLD nuevoNodo = new NodoLD(o);
         if(estaVacio()){
             this.cabeza = nuevoNodo;
             this.act =this.cabeza;
@@ -90,7 +90,7 @@ public class Lista {
         tamano++;
     }
     public void imprimir(){
-        Nodo i = this.cabeza;
+        NodoLD i = this.cabeza;
         System.out.print("[");
         while (i.siguiente!=null){
             System.out.print(i.info+", ");
@@ -102,7 +102,7 @@ public class Lista {
     }
 
     public void imprimirRev(){
-        Nodo i = this.cola;
+        NodoLD i = this.cola;
         System.out.print("[");
         while (i.anterior!=null){
             System.out.print(i.info+", ");
@@ -114,13 +114,13 @@ public class Lista {
     }
 
     public void borrarInicio(){
-        Nodo i = this.cabeza;
+        NodoLD i = this.cabeza;
         this.cabeza = i.siguiente;
         this.cabeza.anterior = null;
         tamano--;
     }
     public void borrar(Object o){
-        Nodo i = this.cabeza;
+        NodoLD i = this.cabeza;
         if (i.info==o){
             borrarInicio();
             return;
@@ -144,7 +144,7 @@ public class Lista {
 
     public void borrarPos(Object x){
         Scanner scn = new Scanner(System.in);
-        Nodo i = this.cabeza;
+        NodoLD i = this.cabeza;
         System.out.print("Seleccione su opcion...\n" +
                 "1. Borrar antes del "+x+ "\n2. Borrar despues del "+x+"" +
                 "\nRespuesta: ");
@@ -190,14 +190,14 @@ public class Lista {
     }
 
     public void borrarFin(){
-        Nodo i = this.cola;
+        NodoLD i = this.cola;
         this.cola = i.anterior;
         this.cola.siguiente = null;
         tamano--;
     }
 
     public void buscar(Object o){
-        Nodo i = this.cabeza;
+        NodoLD i = this.cabeza;
         if (i.info==o){
             System.out.println("El elemento "+o+" SI esta en la lista");
             return;

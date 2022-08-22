@@ -1,7 +1,7 @@
 public class Lista {
     public int tamano;
-    public Nodo cabeza;
-    public Nodo cola;
+    public NodoLD cabeza;
+    public NodoLD cola;
 
     public Lista() {
         this.cabeza = null;
@@ -11,7 +11,7 @@ public class Lista {
 
     public Lista(Object o){
         this.tamano = 1;
-        Nodo nuevoNodo = new Nodo(o);
+        NodoLD nuevoNodo = new NodoLD(o);
         this.cabeza = nuevoNodo;
         this.cola = nuevoNodo;
     }
@@ -25,15 +25,15 @@ public class Lista {
     }
 
     public void agregarInicio(Object o){
-        Nodo nuevoNodo = new Nodo(o);
+        NodoLD nuevoNodo = new NodoLD(o);
         nuevoNodo.siguiente = this.cabeza;
         this.cabeza = nuevoNodo;
         tamano++;
     }
 
     public void agregarPos(Object o, int ind){
-        Nodo nuevoNodo = new Nodo(o);
-        Nodo i = this.cabeza;
+        NodoLD nuevoNodo = new NodoLD(o);
+        NodoLD i = this.cabeza;
         if (ind==0){
             agregarInicio(o);
         } else if (ind==tamano) {
@@ -51,7 +51,7 @@ public class Lista {
     }
 
     public void agregarFin(Object o){
-        Nodo nuevoNodo = new Nodo(o);
+        NodoLD nuevoNodo = new NodoLD(o);
         if(estaVacio()){
             this.cabeza = nuevoNodo;
         } else {
@@ -61,7 +61,7 @@ public class Lista {
         tamano++;
     }
     public void imprimir(){
-        Nodo i = this.cabeza;
+        NodoLD i = this.cabeza;
         System.out.print("[");
         while (i.siguiente!=null){
             System.out.print(i.info+", ");
@@ -73,7 +73,7 @@ public class Lista {
     }
 
     public void borrar(Object o){
-        Nodo i = this.cabeza;
+        NodoLD i = this.cabeza;
         if (i.info==o){
             this.cabeza = i.siguiente;
             tamano--;
@@ -91,7 +91,7 @@ public class Lista {
     }
 
     public void buscar(Object o){
-        Nodo i = this.cabeza;
+        NodoLD i = this.cabeza;
         if (i.info==o){
             System.out.println("El elemento "+o+" SI esta en la lista");
             return;
