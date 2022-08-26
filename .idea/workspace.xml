@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="569331ea-ea33-47a0-a771-5a9eb24f2f52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Semana 6/Circular Simple/Circular Simple.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +32,8 @@
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager" selected="Application.MainLD">
@@ -71,6 +71,7 @@
       <workItem from="1660835955720" duration="82000" />
       <workItem from="1661174559080" duration="363000" />
       <workItem from="1661362025523" duration="2127000" />
+      <workItem from="1661440192532" duration="2722000" />
     </task>
     <servers />
   </component>
