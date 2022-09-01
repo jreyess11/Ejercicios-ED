@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569331ea-ea33-47a0-a771-5a9eb24f2f52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ejercicios-ED.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicios-ED.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana 7/Circulares Dobles/src/ListaCD.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana 7/Circulares Dobles/src/ListaCD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana 7/Circulares Dobles/src/MainCD.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana 7/Circulares Dobles/src/MainCD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana 7/Circulares Dobles/src/NodoCD.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana 7/Circulares Dobles/src/NodoCD.java" afterDir="false" />
-    </list>
+    <list default="true" id="569331ea-ea33-47a0-a771-5a9eb24f2f52" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +78,7 @@
       <workItem from="1661174559080" duration="363000" />
       <workItem from="1661362025523" duration="2127000" />
       <workItem from="1661440192532" duration="2722000" />
-      <workItem from="1661967105498" duration="4199000" />
+      <workItem from="1661967105498" duration="4493000" />
     </task>
     <servers />
   </component>
