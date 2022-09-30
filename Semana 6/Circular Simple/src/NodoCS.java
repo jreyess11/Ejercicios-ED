@@ -1,8 +1,8 @@
-public class Nodo {
+public class NodoCS {
     public Object info;
-    public NodoLD siguiente;
+    public NodoCS siguiente;
 
-    public Nodo(Object info) {
+    public NodoCS(Object info) {
         this.info = info;
         this.siguiente=null;
     }
